@@ -4,14 +4,12 @@ For an in-depth install and explanation follow:
 
 https://hpc-ecosystems.gitlab.io/training/openhpc-2.x-guide/2_virtual_lab_setup/
 
-## Overview
-
-### Software Install:
+## Software Install:
 1. Install VirtualBox
 2. Install Vagrant
 3. Install Gitbash (if using windows)
 
-### Setup 
+## Setup 
 
 1 Open gitbash and go to your desired projects/documents folder
 
@@ -59,6 +57,7 @@ Ignore `SSH private key issue`
 
 ```
 /vcluster/ vagrant ssh smshost
+[vagrant@smshost2 vagrant]# sudo su
 [root@smshost2 vagrant]# sudo sinfo
 PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
 normal*      up 1-00:00:00      2  down* compute[00-01]
@@ -67,14 +66,16 @@ normal*      up 1-00:00:00      2  down* compute[00-01]
 Both nodes are down so `ssh` to both nodes as root and do:
 
 ```
+[root@smshost2 vagrant]# ssh compute00
 [root@compute00 ]# systemctl restart slurmd
 ```
 
 ```
+[root@smshost2 vagrant]# ssh compute01
 [root@compute01 ]# systemctl restart slurmd
 ```
 
-13. Go back to login node and make sure you get the following:
+13. Go back to login node (Ctrl + d) and make sure you get the following:
 
 ```
 [root@smshost2 vagrant]# sudo sinfo
@@ -82,7 +83,9 @@ PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
 normal*      up 1-00:00:00      2   idle compute[00-01]
 ```
 
-14. This is small bug that needs to be fixed but do the following on each vm:
+The `STATE` should show `idle`.
+
+14. Lastly fix a small bug in `/etc/hosts` on each vm:
 
 ```
 [root@smshost2 vagrant]# sudo sed -i '3d' /etc/hosts
@@ -104,4 +107,4 @@ Now we can start using our cluster and submit jobs!
 2. Add screenshots/code of expected outputs
 3. Show setup with Windows Terminal
 
-# Reference 
+
