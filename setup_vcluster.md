@@ -12,9 +12,11 @@ https://hpc-ecosystems.gitlab.io/training/openhpc-2.x-guide/2_virtual_lab_setup/
 3. Install Gitbash (if using windows)
 
 ### Setup 
+
 1 Open gitbash and go to your desired projects/documents folder
+
 2. Create a directory called `mkdir vcluster` to store your virtual cluster files
-3. `cd vcluster`
+3. ```cd vcluster```
 4. `git clone https://gitlab.com/hpc-ecosystems/training/openhpc-2.x-virtual-lab.git 
 cd openhpc-2.x-virtual-lab`
 5. `cd openhpc-2.x-virtual-lab`
