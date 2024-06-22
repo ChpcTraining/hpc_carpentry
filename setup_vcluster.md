@@ -28,7 +28,7 @@ cd openhpc-2.x-virtual-lab
 - `package.box`
 - `packaged-openhpc2-smshost.box`
 - `Vagrantfile`
-{add link here}
+
 8. Add the pre-built Vagrant box to the Vagrant environment
 
 ```
