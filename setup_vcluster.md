@@ -1,4 +1,4 @@
-# Install
+# Setup Virtual Cluster
 
 For an in-depth install and explanation follow:
 
