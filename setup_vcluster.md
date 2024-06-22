@@ -6,33 +6,36 @@ https://hpc-ecosystems.gitlab.io/training/openhpc-2.x-guide/2_virtual_lab_setup/
 
 ## Overview
 
+### Software Install:
 1. Install VirtualBox
 2. Install Vagrant
 3. Install Gitbash (if using windows)
-4. Open gitbash and go to your desired projects/documents folder
-5. Create a directory called `mkdir vcluster` to store your virtual cluster files
-6. cd `vcluster`
-7. `git clone https://gitlab.com/hpc-ecosystems/training/openhpc-2.x-virtual-lab.git 
+
+### Setup 
+1 Open gitbash and go to your desired projects/documents folder
+2. Create a directory called `mkdir vcluster` to store your virtual cluster files
+3. `cd vcluster`
+4. `git clone https://gitlab.com/hpc-ecosystems/training/openhpc-2.x-virtual-lab.git 
 cd openhpc-2.x-virtual-lab`
-8. `cd openhpc-2.x-virtual-lab`
-9. Delete the existing Vagrant file with `rm Vargrantfile`
-10. Download Vagrant files and add them to the `/vcluster` folder
+5. `cd openhpc-2.x-virtual-lab`
+6. Delete the existing Vagrant file with `rm Vargrantfile`
+7. Download Vagrant files and add them to the `/vcluster` folder
 - `package.box`
 - `packaged-openhpc2-smshost.box`
 - `Vagrantfile`
 {add link here}
-11. Add the pre-built Vagrant box to the Vagrant environment
+8. Add the pre-built Vagrant box to the Vagrant environment
 
 ```
 vagrant box add openhpc/ohpc2 file:/packaged-openhpc2-smshost.box
 ```
 
-12. Once complete start login node:
+9. Once complete start login node:
 
 ```
 vagrant up smshost
 ```
-13. Now start first compute node 0:
+10. Now start first compute node 0:
 
 ```
 vagrant up compute00
@@ -40,13 +43,13 @@ vagrant up compute00
 
 Ignore `SSH private key issue`
 
-14. Now start second compute node 1:
+11. Now start second compute node 1:
 
 ```
 vagrant up compute01
 ```
 
-15. Test nodes:
+12. Test nodes:
 
 ```
 [root@smshost2 vagrant]# sudo sinfo
@@ -60,7 +63,7 @@ Both nodes are down so `ssh` to both nodes as root and do:
 systemctl restart slurmd
 ```
 
-16. Go back to login node and make sure you get the following:
+13. Go back to login node and make sure you get the following:
 
 ```
 [root@smshost2 vagrant]# sudo sinfo
@@ -68,7 +71,7 @@ PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
 normal*      up 1-00:00:00      2   idle compute[00-01]
 ```
 
-17. This is small bug that needs to be fixed but do the following on each vm:
+14. This is small bug that needs to be fixed but do the following on each vm:
 
 ```
 [root@smshost2 vagrant]# sudo sed -i '3d' /etc/hosts
@@ -85,7 +88,7 @@ normal*      up 1-00:00:00      2   idle compute[00-01]
 Now we can start using our cluster and submit jobs!
 
 
-To Do:
+## To Do:
 1. Add links
 2. Add screenshots/code of expected outputs
 3. Show setup with Windows Terminal
