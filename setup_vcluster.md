@@ -32,18 +32,19 @@ cd openhpc-2.x-virtual-lab
 8. Add the pre-built Vagrant box to the Vagrant environment
 
 ```
-vagrant box add openhpc/ohpc2 file:/packaged-openhpc2-smshost.box
+/vcluster/ vagrant box add openhpc/ohpc2 file:/packaged-openhpc2-smshost.box
 ```
 
 9. Once complete start login node:
 
 ```
-vagrant up smshost
+/vcluster/ vagrant up smshost
 ```
+
 10. Now start first compute node 0:
 
 ```
-vagrant up compute00
+/vcluster/ vagrant up compute00
 ```
 
 Ignore `SSH private key issue`
@@ -51,7 +52,7 @@ Ignore `SSH private key issue`
 11. Now start second compute node 1:
 
 ```
-vagrant up compute01
+/vcluster/ vagrant up compute01
 ```
 
 12. Test nodes:
@@ -65,7 +66,11 @@ normal*      up 1-00:00:00      2  down* compute[00-01]
 Both nodes are down so `ssh` to both nodes as root and do:
 
 ```
-systemctl restart slurmd
+[root@compute00 ]# systemctl restart slurmd
+```
+
+```
+[root@compute01 ]# systemctl restart slurmd
 ```
 
 13. Go back to login node and make sure you get the following:
