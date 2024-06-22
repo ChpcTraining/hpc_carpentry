@@ -24,7 +24,7 @@ cd openhpc-2.x-virtual-lab
 ```
 5. `cd openhpc-2.x-virtual-lab`
 6. Delete the existing Vagrant file with `rm Vargrantfile`
-7. Download Vagrant files and add them to the `/vcluster` folder
+7. Download Vagrant files [link] and add them to the `/vcluster` folder
 - `package.box`
 - `packaged-openhpc2-smshost.box`
 - `Vagrantfile`
