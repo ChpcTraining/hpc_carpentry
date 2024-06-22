@@ -17,8 +17,8 @@ https://hpc-ecosystems.gitlab.io/training/openhpc-2.x-guide/2_virtual_lab_setup/
 
 2. Create a directory called `mkdir vcluster` to store your virtual cluster files
 3. ```cd vcluster```
-4. `git clone https://gitlab.com/hpc-ecosystems/training/openhpc-2.x-virtual-lab.git 
-cd openhpc-2.x-virtual-lab`
+4. ```git clone https://gitlab.com/hpc-ecosystems/training/openhpc-2.x-virtual-lab.git 
+cd openhpc-2.x-virtual-lab```
 5. `cd openhpc-2.x-virtual-lab`
 6. Delete the existing Vagrant file with `rm Vargrantfile`
 7. Download Vagrant files and add them to the `/vcluster` folder
