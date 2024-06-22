@@ -35,7 +35,7 @@ cd openhpc-2.x-virtual-lab
 /vcluster/ vagrant box add openhpc/ohpc2 file:/packaged-openhpc2-smshost.box
 ```
 
-9. Once complete start login node:
+9. Once complete start the login node:
 
 ```
 /vcluster/ vagrant up smshost
