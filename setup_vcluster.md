@@ -58,6 +58,7 @@ Ignore `SSH private key issue`
 12. Test nodes:
 
 ```
+/vcluster/ vagrant ssh smshost
 [root@smshost2 vagrant]# sudo sinfo
 PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
 normal*      up 1-00:00:00      2  down* compute[00-01]
