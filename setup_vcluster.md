@@ -11,6 +11,12 @@ https://hpc-ecosystems.gitlab.io/training/openhpc-2.x-guide/2_virtual_lab_setup/
 
 ## Setup 
 
+What you will be building:
+
+![image](https://github.com/ChpcTraining/hpc_carpentry/assets/157092105/1c46431b-7fac-41a4-9206-283641a45bce)
+
+### Steps
+
 1 Open gitbash and go to your desired projects/documents folder
 
 2. Create a directory called `mkdir vcluster` to store your virtual cluster files
