@@ -17,35 +17,35 @@ What you will be building:
 
 ### Steps
 
-1 Open gitbash and go to your desired projects/documents folder
+Open gitbash and go to your desired projects/documents folder
 
-2. Create a directory called `mkdir vcluster` to store your virtual cluster files
-3. ```cd vcluster```
-4. Clone the repo
+1. Create a directory called `mkdir vcluster` to store your virtual cluster files
+1. ```cd vcluster```
+1. Clone the repo
 ```
 git clone https://gitlab.com/hpc-ecosystems/training/openhpc-2.x-virtual-lab.git 
 cd openhpc-2.x-virtual-lab
 ```
-5. `cd openhpc-2.x-virtual-lab`
-6. Delete the existing Vagrant file with `rm Vargrantfile`
-7. Download Vagrant files [link] and add them to the `/vcluster` folder
+1. `cd openhpc-2.x-virtual-lab`
+1. Delete the existing Vagrant file with `rm Vargrantfile`
+1. Download Vagrant files [link] and add them to the `/vcluster` folder
 - `package.box`
 - `packaged-openhpc2-smshost.box`
 - `Vagrantfile`
 
-8. Add the pre-built Vagrant box to the Vagrant environment
+1. Add the pre-built Vagrant box to the Vagrant environment
 
 ```
 /vcluster/ vagrant box add openhpc/ohpc2 file:/packaged-openhpc2-smshost.box
 ```
 
-9. Once complete start the login node:
+1. Once complete start the login node:
 
 ```
 /vcluster/ vagrant up smshost
 ```
 
-10. Now start first compute node 0:
+1. Now start first compute node 0:
 
 ```
 /vcluster/ vagrant up compute00
@@ -53,13 +53,13 @@ cd openhpc-2.x-virtual-lab
 
 Ignore `SSH private key issue`
 
-11. Now start second compute node 1:
+1. Now start second compute node 1:
 
 ```
 /vcluster/ vagrant up compute01
 ```
 
-12. Test nodes:
+1. Test nodes:
 
 ```
 /vcluster/ vagrant ssh smshost
@@ -81,7 +81,7 @@ Both nodes are down so `ssh` to both nodes as root and do:
 [root@compute01 ]# systemctl restart slurmd
 ```
 
-13. Go back to login node (Ctrl + d) and make sure you get the following:
+1. Go back to login node (Ctrl + d) and make sure you get the following:
 
 ```
 [root@smshost2 vagrant]# sudo sinfo
@@ -91,7 +91,7 @@ normal*      up 1-00:00:00      2   idle compute[00-01]
 
 The `STATE` should show `idle`.
 
-14. Lastly fix a small bug in `/etc/hosts` on each vm:
+1. Lastly fix a small bug in `/etc/hosts` on each vm:
 
 ```
 [root@smshost2 vagrant]# sudo sed -i '3d' /etc/hosts
