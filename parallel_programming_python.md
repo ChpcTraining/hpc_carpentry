@@ -36,6 +36,8 @@ How it works: Synchronous operations are straightforward—each step waits for t
 
 Example: A person making breakfast might toast bread, then fry eggs, and finally brew coffee. They wait for the toast to finish before starting the eggs, and then for the eggs to finish before starting the coffee.
 
+![image](https://github.com/user-attachments/assets/4ad5e390-6f4b-426b-ace2-7fc5adf027ac)
+
 
 
 
