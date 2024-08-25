@@ -2,6 +2,13 @@
 
 ## Concurrency vs. Parallelism
 
+![image](https://github.com/user-attachments/assets/0faaa6fd-d649-4d65-b23e-a780440cce78)
+
+![image](https://github.com/user-attachments/assets/901dac73-2a62-4ccb-bb7d-f2d6c06aa1c0)
+
+![image](https://github.com/user-attachments/assets/e722d6cb-2957-4a9f-af65-2760271fd797)
+
+
 ### Concurrency:
 
 Definition: Concurrency refers to the ability of a system to handle multiple tasks or processes simultaneously in an overlapping manner. However, these tasks might not be executing at the exact same time.
