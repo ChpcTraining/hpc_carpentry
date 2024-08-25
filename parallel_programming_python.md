@@ -10,6 +10,9 @@ How it works: In a concurrent system, multiple tasks are in progress at the same
 
 Example: Imagine a single chef preparing multiple dishes. The chef might start chopping vegetables for one dish, then while they are simmering, they start cooking another dish. The chef switches between tasks, but only one task is actively being executed at any moment.
 
+![image](https://github.com/user-attachments/assets/bab56c0b-3585-4217-bca4-d101506ee909)
+
+
 ![image](https://github.com/user-attachments/assets/31a05fff-b9cf-426a-a7f7-88acabf0c177)
 
 
