@@ -1,4 +1,4 @@
-# Intro
+# Theory
 
 ## Concurrency vs. Parallelism
 
@@ -64,4 +64,38 @@ In summary:
 - Synchronous processing means tasks are done one after the other in a blocking manner.
 
 - Asynchronous processing allows tasks to be initiated and continue independently, without blocking the progress of other tasks.
+
+# Application
+
+## 1. Concurrent vs. Parallel:
+
+Concurrent: All three applications (Chrome, Word, and Outlook) are running concurrently on your laptop. Your operating system is managing these processes in a way that allows them to run simultaneously. They can be in different states (e.g., one is actively running, another is waiting for input, etc.), and they can share resources like CPU, memory, and I/O.
+
+Parallel: Since your laptop has 8 cores, some of these processes might be running in parallel. For instance, Chrome might be using one core, Word might be using another, and Outlook might be using a third core. This is true parallelism—each application is being processed simultaneously on different CPU cores.
+
+## 2. Synchronous vs. Asynchronous:
+
+Synchronous: If a process within any of these applications is blocking—meaning it must wait for one task to finish before starting another—then it's operating synchronously. For example, if you open a file in Word and it waits for the file to be fully loaded before you can start typing, that part of the process is synchronous.
+
+Asynchronous: Modern applications often perform many tasks asynchronously to improve responsiveness. For example:
+When you open Chrome and start typing a URL, Chrome may simultaneously be loading tabs from a previous session in the background (asynchronously).
+Outlook might be synchronizing your email in the background while you read an email (asynchronously).
+Word might auto-save your document while you continue typing, without blocking you from editing (asynchronously).
+
+In Summary:
+
+Concurrent: Yes, the processes (Chrome, Word, and Outlook) are concurrent because they are running at the same time, sharing system resources.
+
+Parallel: Yes, since your laptop has multiple cores, these processes can also be running in parallel, each on a different core.
+
+Synchronous: Some parts of these applications may perform tasks synchronously, where one task must complete before another starts (e.g., loading a 
+document).
+
+Asynchronous: Many tasks within these applications are likely asynchronous, where multiple tasks (like loading, saving, and synchronizing) happen simultaneously without waiting for each other to complete.
+So, when you open Google Chrome, Microsoft Word, and Outlook on your laptop:
+
+- They are concurrent because they are all active at the same time.
+- They might be running in parallel across different CPU cores.
+- Some operations within each app might be synchronous (one task after another).
+- Many operations, especially background tasks, are likely asynchronous (happening independently and concurrently).
 
