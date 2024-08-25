@@ -10,6 +10,12 @@ How it works: In a concurrent system, multiple tasks are in progress at the same
 
 Example: Imagine a single chef preparing multiple dishes. The chef might start chopping vegetables for one dish, then while they are simmering, they start cooking another dish. The chef switches between tasks, but only one task is actively being executed at any moment.
 
+![image](https://github.com/user-attachments/assets/31a05fff-b9cf-426a-a7f7-88acabf0c177)
+
+
+
+
+
 ### Parallelism:
 
 Definition: Parallelism is a type of concurrency where multiple tasks are executed simultaneously across multiple cores or processors. Parallelism involves actually running multiple tasks at the same time.
@@ -18,15 +24,20 @@ How it works: Parallelism requires multiple processors or cores. Different tasks
 
 Example: Imagine having multiple chefs in a kitchen, each preparing a different dish at the same time. Here, multiple tasks (dishes) are truly being executed in parallel.
 
+![image](https://github.com/user-attachments/assets/e82845c4-600c-4750-97da-58c0b91c1209)
+
 ## Synchronous vs. Asynchronous
 
 ### Synchronous:
 
-Definition: In a synchronous process, tasks are executed sequentially, meaning each task must complete before the next one can begin. The tasks are typically executed in a blocking manner, where one task waits for the previous one to finish.
+Definition: In a synchronous process, tasks are executed sequentially, meaning each task must complete before the next one can begin, concept of blocking. The tasks are typically executed in a blocking manner, where one task waits for the previous one to finish.
 
 How it works: Synchronous operations are straightforward—each step waits for the previous step to complete. This is often easier to reason about but can be inefficient if a task is idle or waiting for something (like I/O).
 
 Example: A person making breakfast might toast bread, then fry eggs, and finally brew coffee. They wait for the toast to finish before starting the eggs, and then for the eggs to finish before starting the coffee.
+
+![image](https://github.com/user-attachments/assets/acee7edc-8bf4-4b41-a204-aa661517ee6a)
+
 
 ### Asynchronous:
 
@@ -46,6 +57,7 @@ Parallelism, on the other hand, specifically involves tasks being executed at th
 ### Synchronous and Asynchronous:
 
 Synchronous execution usually implies that tasks are being executed one after the other (sequentially), which can happen in both concurrent and non-concurrent contexts.
+
 Asynchronous execution allows tasks to run independently, often leading to better performance in systems that can handle it, particularly when tasks involve waiting periods (e.g., I/O operations).
 
 ### Misconception Clarification
@@ -53,6 +65,7 @@ Asynchronous execution allows tasks to run independently, often leading to bette
 It's a common misconception to equate concurrency with synchronous execution and parallelism with asynchronous execution. However:
 
 Concurrent systems can be either synchronous or asynchronous. You can have a system that handles multiple tasks (concurrently) in a blocking manner (synchronously), or you could have tasks that run independently (asynchronously) but aren't actually executed in parallel.
+
 Parallel systems can also be synchronous or asynchronous. Tasks may be executed in parallel but still follow a synchronous order, or they can run in parallel asynchronously.
 
 In summary:
