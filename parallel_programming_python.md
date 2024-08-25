@@ -99,3 +99,11 @@ So, when you open Google Chrome, Microsoft Word, and Outlook on your laptop:
 - Some operations within each app might be synchronous (one task after another).
 - Many operations, especially background tasks, are likely asynchronous (happening independently and concurrently).
 
+# Guides
+
+https://www.hpc-carpentry.org/hpc-python/
+
+https://carpentries-incubator.github.io/lesson-parallel-python/01-introduction/index.html
+
+https://carpentries-incubator.github.io/lesson-gpu-programming/cupy.html
+
