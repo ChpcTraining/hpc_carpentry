@@ -13,12 +13,6 @@ Example: Imagine a single chef preparing multiple dishes. The chef might start c
 ![image](https://github.com/user-attachments/assets/bab56c0b-3585-4217-bca4-d101506ee909)
 
 
-![image](https://github.com/user-attachments/assets/31a05fff-b9cf-426a-a7f7-88acabf0c177)
-
-
-
-
-
 ### Parallelism:
 
 Definition: Parallelism is a type of concurrency where multiple tasks are executed simultaneously across multiple cores or processors. Parallelism involves actually running multiple tasks at the same time.
@@ -28,6 +22,9 @@ How it works: Parallelism requires multiple processors or cores. Different tasks
 Example: Imagine having multiple chefs in a kitchen, each preparing a different dish at the same time. Here, multiple tasks (dishes) are truly being executed in parallel.
 
 ![image](https://github.com/user-attachments/assets/e82845c4-600c-4750-97da-58c0b91c1209)
+
+![image](https://github.com/user-attachments/assets/31a05fff-b9cf-426a-a7f7-88acabf0c177)
+
 
 ## Synchronous vs. Asynchronous
 
@@ -39,7 +36,7 @@ How it works: Synchronous operations are straightforward—each step waits for t
 
 Example: A person making breakfast might toast bread, then fry eggs, and finally brew coffee. They wait for the toast to finish before starting the eggs, and then for the eggs to finish before starting the coffee.
 
-![image](https://github.com/user-attachments/assets/acee7edc-8bf4-4b41-a204-aa661517ee6a)
+
 
 
 ### Asynchronous:
@@ -49,6 +46,8 @@ Definition: Asynchronous processing allows tasks to be executed out of sequence,
 How it works: Asynchronous operations often involve callbacks, promises, or events. A task can be started, and while it’s still running, other tasks can be executed. When the asynchronous task is complete, its result is handled separately.
 
 Example: A person starts brewing coffee, then while the coffee is brewing, they begin frying eggs. While the eggs are frying, they might start toasting bread. The tasks are overlapping, and the person doesn’t wait for one task to complete before starting another.
+
+![image](https://github.com/user-attachments/assets/acee7edc-8bf4-4b41-a204-aa661517ee6a)
 
 ## Relationship Between the Concepts
 
