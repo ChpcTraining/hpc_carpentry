@@ -1,3 +1,21 @@
+# Table of Contents
+
+- [Theory](#theory)
+  - [Concurrency vs. Parallelism](#concurrency-vs-parallelism)
+    - [Concurrency](#concurrency)
+    - [Parallelism](#parallelism)
+  - [Synchronous vs. Asynchronous](#synchronous-vs-asynchronous)
+    - [Synchronous](#synchronous)
+    - [Asynchronous](#asynchronous)
+  - [Relationship Between the Concepts](#relationship-between-the-concepts)
+    - [Concurrency and Parallelism](#concurrency-and-parallelism)
+    - [Synchronous and Asynchronous](#synchronous-and-asynchronous)
+    - [Misconception Clarification](#misconception-clarification)
+- [Application](#application)
+  - [1. Concurrent vs. Parallel](#1-concurrent-vs-parallel)
+  - [2. Synchronous vs. Asynchronous](#2-synchronous-vs-asynchronous)
+- [Guides](#guides)
+
 # Theory
 
 ## Concurrency vs. Parallelism
